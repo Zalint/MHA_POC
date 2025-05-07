@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #1a73e8;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.section {
+    margin-bottom: 3rem;
+}
+
+h1 {
+    color: #1a73e8;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.feed-container {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    min-height: 200px;
+}
+
+.tickets-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 500;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.actualites-mix {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    gap: 1.5rem;
+    min-height: 40px;
+    margin-bottom: 1rem;
+}
+
+.logo-ministere {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1a73e8;
+    background: white;
+}
+
+.marquee-container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    height: 1.7em;
+    display: flex;
+    align-items: center;
+}
+
+.marquee {
+    white-space: nowrap;
+    display: inline-block;
+    animation: marquee 40s linear infinite;
+    font-size: 1rem;
+    color: #1a73e8;
+    font-weight: 500;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.voir-plus-container {
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.voir-plus-btn {
+    background: #1a73e8;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.voir-plus-btn:hover {
+    background: #155ab6;
+}
+
+@media (max-width: 600px) {
+    .actualites-mix {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .logo-ministere {
+        width: 50px;
+        height: 50px;
+    }
+    .marquee {
+        font-size: 1rem;
+    }
+    .voir-plus-container {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 0.75rem;
+    }
+} 
