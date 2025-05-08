@@ -215,4 +215,133 @@ footer {
     th, td {
         padding: 0.75rem;
     }
+}
+
+/* Styles de base pour mobile */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        padding: 0.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        padding: 1rem 0.5rem;
+    }
+
+    .section {
+        margin-bottom: 2rem;
+    }
+
+    .tickets-container {
+        margin: 0 -0.5rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+        white-space: nowrap;
+    }
+
+    .voir-plus-btn {
+        display: block;
+        text-align: center;
+        margin: 1rem 0;
+    }
+}
+
+/* Styles pour tablettes */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        padding: 0.75rem;
+    }
+
+    nav ul li {
+        margin: 0 0.75rem;
+    }
+
+    .tickets-container {
+        margin: 0 -0.75rem;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 0.75rem;
+    }
+}
+
+/* Améliorations pour le défilement horizontal du tableau */
+.tickets-container {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.tickets-container::-webkit-scrollbar {
+    height: 4px;
+}
+
+.tickets-container::-webkit-scrollbar-thumb {
+    background-color: #1a73e8;
+    border-radius: 2px;
+}
+
+/* Optimisation des boutons pour le tactile */
+.voir-plus-btn {
+    padding: 0.75rem 1.5rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Amélioration de la lisibilité sur mobile */
+@media (max-width: 480px) {
+    .marquee {
+        font-size: 0.9rem;
+    }
+
+    .actualites-mix {
+        padding: 0.75rem;
+    }
+
+    footer {
+        padding: 1rem 0.5rem;
+        font-size: 0.8rem;
+    }
 } 
